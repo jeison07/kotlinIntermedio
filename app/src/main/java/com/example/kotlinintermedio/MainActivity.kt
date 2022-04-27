@@ -9,7 +9,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Enum Classes
-        enumClasses()
+        //enumClasses()
+
+        //Nested and Inner Classes
+        nestedAndInnerClasses()
     }
     // leccion 1 kotlin intermedio: Enum classes
     enum class Direction (val dir: Int){
@@ -46,6 +49,19 @@ class MainActivity : AppCompatActivity() {
 
         // inicializacion
         println(userDirection.dir)
+
+    }
+    // leccion 2 kotlin intermedio: Nested and Inner Classes
+    private fun nestedAndInnerClasses(){
+        //clases anidada (Nested)
+        val myNestedClasses = MyNestedAndInnerClasses.MyNestedClasses()
+        val sum: Int = myNestedClasses.sum(10,5)
+        println(" El resultado de ls suma es $sum")
+
+        //clase interna (inner classes)
+        val myInnerClass = MyNestedAndInnerClasses().MyinnerClass()
+        val sumTwo: Int = myInnerClass.sumTwo(10)
+        println(" El resultado de sumar dos es $sumTwo")
 
     }
 }
